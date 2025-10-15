@@ -56,11 +56,30 @@ public class App {
         }
 
         //salida final
-        System.out.printf("""
-                
-        Tarta de %s: %.2f
+        switch (typeCake) {
+            case "manzana":
+            case "fresa":
+                System.out.printf("Tarta de %s: %.2f%n", typeCake, cakePrice);
+            break;
 
-        """, typeCake);
+            case "chocolate":
+                System.out.printf("Tarta de %s %s: %.2f%n", typeCake, typeChoc, cakePrice);
+            break;
+
+            default:
+                return;
+        }
+
+        if(nata == true){
+            System.out.printf("Con nata: %.2f%n", xtranata);
+        }
+
+        if(name == true){
+            System.out.printf("Con nombre: %.2f%n", xtrname);
+        }
+
+        System.out.printf("Total: %.2f%n", total);
+
     }
 }
 
